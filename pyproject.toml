@@ -1,0 +1,36 @@
+[project]
+name = "ut-cs6300-assignment-03"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Ryan Poppe",email = "ryan.poppe@vasion.com"}
+]
+readme = "README.md"
+package-mode = false
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "requests (>=2.32.5,<3.0.0)",
+    "smolagents[openai,telemetry,toolkit] (>=1.21.3,<2.0.0)",
+    "pandas (>=2.3.2,<3.0.0)",
+    "numpy (>=2.3.2,<3.0.0)",
+    "google-genai (>=1.33.0,<2.0.0)",
+    "pytest (>=8.4.2,<9.0.0)",
+    "scrapy (>=2.13.3,<3.0.0)",
+    "scrapy-playwright (>=0.0.44,<0.0.45)",
+    "jsonschema (>=4.25.1,<5.0.0)",
+    "chromadb (>=1.1.0,<2.0.0)",
+    "sentence-transformers (>=5.1.1,<6.0.0)",
+    "scikit-learn (>=1.7.2,<2.0.0)",
+    "pinecone (>=7.3.0,<8.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+testpaths = [
+    "tests"
+]
